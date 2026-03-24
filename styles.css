@@ -15,10 +15,14 @@ body {
   color: #f8fafc;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  /* FIX: Strictly prevents horizontal scrolling on mobile */
+  overflow-x: hidden; 
 }
 
 html {
   scroll-behavior: smooth;
+  /* FIX: Strictly prevents horizontal scrolling on mobile */
+  overflow-x: hidden;
 }
 
 a {
@@ -739,10 +743,10 @@ section h2 {
 /* ==========================================================================
    PROJECTS & CERTIFICATES SECTION (Fluid Grid Architecture)
    ========================================================================== */
-/* THE FIX: Replaced rigid 320px with elastic min() function */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  /* FIX: Safer minmax baseline for grid cards */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
@@ -768,7 +772,6 @@ section h2 {
   height: 100%;
 }
 
-/* THE FIX: Enabled flex-wrap to prevent badges from squishing */
 .project-title-row {
   display: flex;
   justify-content: space-between;
@@ -778,7 +781,6 @@ section h2 {
   flex-wrap: wrap; 
 }
 
-/* THE FIX: Allowed headers to claim space and safely break long words */
 .project-title-row h3 {
   color: #f8fafc;
   font-size: 1.3rem;
@@ -957,6 +959,25 @@ section h2 {
   .portfolio-actions { margin: 0 auto 2.5rem auto; }
   .resume-container { flex-direction: column; gap: 2rem; }
   
+  /* FIX: Explicitly tells the Contact section to stack vertically on phones/tablets */
+  .contact-section .group {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* FIX: Explictly tells the Testimony section to stack vertically */
+  .testimony-section .group {
+    flex-direction: column;
+    text-align: center;
+  }
+  .testimony-section .person-details {
+    flex: auto;
+    border-right: none;
+    border-bottom: 1px solid #334155;
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+  }
+
   nav {
     flex-direction: row !important;
     justify-content: space-between !important;
@@ -974,5 +995,10 @@ section h2 {
   .skills-section .cell {
     width: 100%; 
     justify-content: center; 
+  }
+
+  /* FIX: Forces the Grid to drop into exactly 1 column on very small phone screens */
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
