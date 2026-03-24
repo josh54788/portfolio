@@ -737,11 +737,12 @@ section h2 {
 }
 
 /* ==========================================================================
-   PROJECTS SECTION (6-Card CSS Grid)
+   PROJECTS & CERTIFICATES SECTION (Fluid Grid Architecture)
    ========================================================================== */
+/* THE FIX: Replaced rigid 320px with elastic min() function */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 2rem;
 }
 
@@ -767,23 +768,26 @@ section h2 {
   height: 100%;
 }
 
-/* --- THE FIX: Aligns items at the top and adds a gap --- */
+/* THE FIX: Enabled flex-wrap to prevent badges from squishing */
 .project-title-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start; 
   margin-bottom: 1rem;
   gap: 15px;
+  flex-wrap: wrap; 
 }
 
+/* THE FIX: Allowed headers to claim space and safely break long words */
 .project-title-row h3 {
   color: #f8fafc;
   font-size: 1.3rem;
   line-height: 1.3;
   margin: 0;
+  flex: 1; 
+  word-break: break-word; 
 }
 
-/* --- THE FIX: Base Badge Styles + Success Class Added --- */
 .badge {
   padding: 0.2rem 0.6rem;
   border-radius: 6px;
