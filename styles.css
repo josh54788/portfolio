@@ -3,14 +3,12 @@
 /* ==========================================================================
    GLOBAL RESET & TYPOGRAPHY
    ========================================================================== */
-/* Clears default browser padding/margins and applies border-box to prevent overflow issues */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Applies the Poppins font globally, smooths text rendering, sets dark theme background */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #0f172a;
@@ -19,17 +17,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Enables smooth scrolling when clicking internal anchor links (e.g., #skills) */
 html {
   scroll-behavior: smooth;
 }
 
-/* Base styles for all anchor tags */
 a {
   text-decoration: none;
   color: inherit;
   transition: color 0.3s ease;
 }
+
 /* ==========================================================================
    NAVIGATION BAR
    ========================================================================== */
@@ -52,7 +49,6 @@ nav {
   color: #38bdf8;
 }
 
-/* Centers the desktop links */
 .desktop-links {
   display: flex;
   gap: 2rem;
@@ -71,8 +67,8 @@ nav {
 
 nav .right {
   display: flex;
-  align-items: center;
   gap: 1.5rem;
+  align-items: center;
 }
 
 nav .right a {
@@ -90,7 +86,7 @@ nav .right a:hover {
    MOBILE HAMBURGER MENU & SIDEBAR
    ========================================================================== */
 .mobile-nav-toggle {
-  display: none; /* Hidden by default on large screens */
+  display: none;
   background: none;
   border: none;
   color: #f8fafc;
@@ -107,7 +103,7 @@ nav .right a:hover {
 .sidebar {
   position: fixed;
   top: 0;
-  right: -100%; /* Hidden completely off the right side of the screen */
+  right: -100%; 
   width: 250px;
   height: 100vh;
   background-color: #1e293b;
@@ -122,7 +118,7 @@ nav .right a:hover {
 }
 
 .sidebar.active {
-  right: 0; /* Slides into view when active */
+  right: 0;
 }
 
 .sidebar a {
@@ -135,50 +131,20 @@ nav .right a:hover {
   color: #38bdf8;
 }
 
-
-/* Styles the logo text on the left of the navbar */
-.nav .left a {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #38bdf8;
-}
-
-/* Aligns the social/contact links horizontally with a gap */
-nav .right {
-  display: flex;
-  gap: 1.5rem;
-}
-
-/* Styles the individual links and aligns the FontAwesome icons with the text */
-nav .right a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.95rem;
-}
-
-/* Changes the color of navbar links when hovered */
-nav .right a:hover {
-  color: #38bdf8;
-}
-
 /* ==========================================================================
    MAIN CONTAINER & SECTIONS
    ========================================================================== */
-/* Centers the main content block and sets a maximum width for ultra-wide monitors */
 main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 5%;
 }
 
-/* Standard padding for all major sections to create breathing room */
 section {
   padding: 6rem 0;
   border-bottom: 1px solid #1e293b;
 }
 
-/* Styles the main headers for sections like Skills, Projects, and Contact */
 section h2 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
@@ -186,9 +152,8 @@ section h2 {
 }
 
 /* ==========================================================================
-   HERO SECTION (Upgraded Professional Typography)
+   HERO SECTION
    ========================================================================== */
-/* Flexbox layout to sit text and headshot side-by-side on large screens */
 .hero-section {
   display: flex;
   align-items: center;
@@ -197,12 +162,10 @@ section h2 {
   min-height: 80vh;
 }
 
-/* Forces the text container to take up equal space as the image */
 .hero-section .text {
   flex: 1;
 }
 
-/* Adds a sleek, small intro text above your name */
 .hero-greeting {
   font-size: 1.1rem;
   color: #38bdf8;
@@ -212,15 +175,13 @@ section h2 {
   text-transform: uppercase;
 }
 
-/* Makes your name the massive focal point */
 .hero-section .text h2 {
   font-size: 3.5rem;
-  color: #f8fafc; /* Crisp white */
+  color: #f8fafc;
   margin-bottom: 0.5rem;
   line-height: 1.2;
 }
 
-/* Highlights your specific roles below your name */
 .hero-role {
   font-size: 1.5rem;
   color: #94a3b8;
@@ -228,23 +189,20 @@ section h2 {
   font-weight: 400;
 }
 
-/* Refines the biography paragraph for perfect reading comfort */
 .hero-bio {
   font-size: 1.1rem;
-  color: #cbd5e1; /* A soft, premium silver/gray */
-  line-height: 1.8; /* Increases breathing room between lines */
+  color: #cbd5e1;
+  line-height: 1.8;
   margin-bottom: 2.5rem;
-  max-width: 600px; /* Prevents the text from stretching too wide and becoming hard to read */
+  max-width: 600px; 
 }
 
-/* Aligns hero buttons horizontally */
 .hero-section .links {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap; /* Allows buttons to drop to next line on tiny screens */
+  flex-wrap: wrap;
 }
 
-/* Styling anchor tags to look like interactive buttons with FontAwesome icons */
 .hero-section .links a {
   background-color: #1e293b;
   padding: 0.8rem 1.5rem;
@@ -257,14 +215,12 @@ section h2 {
   transition: all 0.3s ease;
 }
 
-/* Hover effect for hero buttons */
 .hero-section .links a:hover {
   background-color: #38bdf8;
   color: #0f172a;
   transform: translateY(-3px);
 }
 
-/* Centers the entire image container */
 .hero-section .headshot {
   flex: 1;
   display: flex;
@@ -272,25 +228,22 @@ section h2 {
   align-items: center;
 }
 
-/* The box holding the image. The padding creates the gap for the brackets! */
 .img-box {
   position: relative;
   padding: 20px; 
   display: inline-block;
 }
 
-/* The Portrait Image */
 .img-box img {
   width: 100%;
   max-width: 320px; 
-  aspect-ratio: 4 / 5; /* Forces a perfect professional portrait shape */
+  aspect-ratio: 4 / 5; 
   object-fit: cover;
-  object-position: center 20%; /* Keeps your face beautifully centered */
-  border-radius: 12px; /* Soft rounded corners like the reference */
+  object-position: center 20%; 
+  border-radius: 12px;
   display: block;
 }
 
-/* The Top-Right Bracket */
 .img-box::before {
   content: '';
   position: absolute;
@@ -300,10 +253,9 @@ section h2 {
   height: 70px;
   border-top: 6px solid #38bdf8; 
   border-right: 6px solid #38bdf8;
-  border-radius: 0 8px 0 0; /* Slight curve on the outside edge */
+  border-radius: 0 8px 0 0; 
 }
 
-/* The Bottom-Left Bracket */
 .img-box::after {
   content: '';
   position: absolute;
@@ -313,20 +265,18 @@ section h2 {
   height: 70px;
   border-bottom: 6px solid #38bdf8;
   border-left: 6px solid #38bdf8;
-  border-radius: 0 0 0 8px; /* Slight curve on the outside edge */
+  border-radius: 0 0 0 8px; 
 }
 
 /* ==========================================================================
-   SKILLS SECTION (Real SVG Logos & Horizontal Cards)
+   SKILLS SECTION
    ========================================================================== */
-/* Styles the introductory text for the skills section */
 .skills-section .text {
   color: #94a3b8;
   margin-bottom: 3rem;
   max-width: 800px;
 }
 
-/* Uses Flexbox to align the cards side-by-side and wrap them to the next line if space runs out */
 .skills-section .cells {
   display: flex;
   flex-wrap: wrap;
@@ -334,34 +284,30 @@ section h2 {
   justify-content: flex-start;
 }
 
-/* Styles the individual rectangular cards to match your uploaded design */
 .skills-section .cell {
-  background-color: #f8fafc; /* Light background forces the colored logos to pop */
+  background-color: #f8fafc;
   padding: 0.8rem 1.5rem;
-  border-radius: 8px; /* Slightly rounded corners */
+  border-radius: 8px;
   display: flex;
-  align-items: center; /* Perfectly centers the image and text vertically */
-  gap: 1rem; /* Spacing between the image and the text */
-  border: 1px solid #cbd5e1; /* Subtle border outline */
-  color: #0f172a; /* Dark text for contrast against the light card */
+  align-items: center; 
+  gap: 1rem; 
+  border: 1px solid #cbd5e1; 
+  color: #0f172a; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-width: 180px; /* Ensures all cards have a consistent minimum width */
+  min-width: 180px; 
 }
 
-/* Adds a hover animation that lifts the card and applies a drop shadow */
 .skills-section .cell:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
-/* Constrains the real logo SVG images so they fit perfectly inside the card */
 .skills-section .cell img {
   width: 35px;
   height: 35px;
-  object-fit: contain; /* Prevents the image from stretching or distorting */
+  object-fit: contain; 
 }
 
-/* Styles the technology name text written next to the logo */
 .skills-section .cell span {
   font-weight: 600;
   font-size: 1.1rem;
@@ -369,9 +315,8 @@ section h2 {
 }
 
 /* ==========================================================================
-   PROJECTS SECTION
+   PROJECTS / TESTIMONY SECTION
    ========================================================================== */
-/* Flexbox to lay out the project title/icon next to the project description */
 .testimony-section .group {
   display: flex;
   background-color: #1e293b;
@@ -381,7 +326,6 @@ section h2 {
   border: 1px solid #334155;
 }
 
-/* Styles the left column of the project card (Icon and Title) */
 .testimony-section .person-details {
   flex: 0 0 250px;
   text-align: center;
@@ -389,27 +333,23 @@ section h2 {
   padding-right: 2rem;
 }
 
-/* Styles the FontAwesome icon representing the project */
 .person-icon {
   font-size: 3rem;
   color: #38bdf8;
   margin-bottom: 1rem;
 }
 
-/* Styles the project name */
 .testimony-section .person-details p:nth-of-type(1) {
   font-weight: 600;
   font-size: 1.1rem;
   color: #f8fafc;
 }
 
-/* Styles the project subtitle/category */
 .testimony-section .person-details p:nth-of-type(2) {
   font-size: 0.85rem;
   color: #94a3b8;
 }
 
-/* Styles the main project description paragraph */
 .testimony-section .text {
   flex: 1;
   font-style: italic;
@@ -421,19 +361,16 @@ section h2 {
 /* ==========================================================================
    CONTACT SECTION
    ========================================================================== */
-/* Places the contact info and the form side-by-side */
 .contact-section .group {
   display: flex;
   gap: 4rem;
 }
 
-/* Styles the text prompting the user to reach out */
 .contact-section .text {
   flex: 1;
   color: #94a3b8;
 }
 
-/* Flexbox to structure the form inputs in a vertical column */
 .contact-section form {
   flex: 1;
   display: flex;
@@ -444,14 +381,12 @@ section h2 {
   border: 1px solid #334155;
 }
 
-/* Styles the input labels */
 .contact-section label {
   margin-bottom: 0.5rem;
   font-weight: 600;
   font-size: 0.9rem;
 }
 
-/* Standardizes the look of all text inputs and textareas */
 .contact-section input,
 .contact-section textarea {
   background-color: #0f172a;
@@ -461,17 +396,15 @@ section h2 {
   border-radius: 8px;
   margin-bottom: 1.5rem;
   font-family: inherit;
-  resize: vertical; /* Only allows the user to resize textareas vertically */
+  resize: vertical;
 }
 
-/* Highlights the input field with a blue border when the user is typing in it */
 .contact-section input:focus,
 .contact-section textarea:focus {
   outline: none;
   border-color: #38bdf8;
 }
 
-/* Styles the final submit button */
 .contact-section button {
   background-color: #38bdf8;
   color: #0f172a;
@@ -484,7 +417,6 @@ section h2 {
   transition: background-color 0.3s ease;
 }
 
-/* Hover effect for the submit button */
 .contact-section button:hover {
   background-color: #0ea5e9;
 }
@@ -492,77 +424,68 @@ section h2 {
 /* ==========================================================================
    PORTFOLIO ACTIONS (Resume & Cover Letter Buttons)
    ========================================================================== */
-/* Container holding all the new action buttons, adding spacing below the bio */
 .portfolio-actions {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: 2.5rem; /* Creates breathing room before the section anchor links */
-  max-width: 450px; /* Keeps the buttons from stretching too wide on desktop monitors */
+  margin-bottom: 2.5rem; 
+  max-width: 450px; 
 }
 
-/* Base button styling for consistent sizing, fonts, and flexbox alignment across all 5 buttons */
 .btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem; /* Space between the text and the FontAwesome icon */
+  gap: 0.5rem; 
   padding: 0.8rem 1.5rem;
-  border-radius: 8px; /* Matches the border-radius of your hero buttons and inputs */
+  border-radius: 8px; 
   font-weight: 600;
   font-size: 1rem;
-  transition: all 0.3s ease; /* Ensures hover effects are smooth, not instant */
+  transition: all 0.3s ease; 
   cursor: pointer;
 }
 
-/* Primary 'Hire Me' button - Solid blue background with dark text */
 .btn-primary {
-  background-color: #38bdf8; /* Matches your theme's primary accent color */
-  color: #0f172a; /* Dark text creates high contrast against the bright blue */
+  background-color: #38bdf8; 
+  color: #0f172a; 
   border: 2px solid #38bdf8;
-  width: 100%; /* Forces the button to span the full width of its container */
+  width: 100%; 
 }
 
-/* Lift and glow effect on hover for the primary button to make it feel interactive */
 .btn-primary:hover {
-  background-color: #0ea5e9; /* Slightly darker blue on hover */
+  background-color: #0ea5e9; 
   border-color: #0ea5e9;
-  transform: translateY(-3px); /* Physically lifts the button up */
-  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2); /* Casts a soft blue shadow beneath it */
+  transform: translateY(-3px); 
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2); 
 }
 
-/* Flexbox container that groups the 'View' and 'Download' buttons horizontally on one line */
 .document-group {
   display: flex;
   gap: 0.8rem;
   width: 100%;
 }
 
-/* Outline buttons for 'View Resume/Cover Letter' - Transparent background, blue border */
 .btn-outline {
-  background-color: transparent; /* Lets the dark theme background show through */
+  background-color: transparent; 
   color: #38bdf8;
   border: 2px solid #38bdf8;
-  flex-grow: 1; /* Tells the 'View' button to expand and take up all remaining space in the row */
+  flex-grow: 1; 
 }
 
-/* Applies a subtle blue background tint and lifts the outline buttons on hover */
 .btn-outline:hover {
   background-color: rgba(56, 189, 248, 0.1); 
   transform: translateY(-3px);
 }
 
-/* Small square download buttons sitting next to the 'View' buttons */
 .btn-icon {
   background-color: transparent;
   color: #38bdf8;
   border: 2px solid #38bdf8;
-  width: 50px; /* Setting a fixed width ensures it remains a perfect square */
+  width: 50px; 
   padding: 0;
-  flex-shrink: 0; /* Prevents the button from shrinking on smaller mobile screens */
+  flex-shrink: 0; 
 }
 
-/* Inverts the colors on hover, making the button solid blue with a dark icon */
 .btn-icon:hover {
   background-color: #38bdf8;
   color: #0f172a;
@@ -570,133 +493,44 @@ section h2 {
 }
 
 /* ==========================================================================
-   MOBILE RESPONSIVENESS (Media Queries)
-   Ensures the layout shifts beautifully on tablets and smartphones
-   ========================================================================== */
-@media (max-width: 850px) {
-  /* Stacks the hero text and image vertically instead of side-by-side */
-  .hero-section {
-    flex-direction: column-reverse;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  /* Adjusts the hero name size for tablets */
-  .hero-section .text h2 {
-    font-size: 2.5rem;
-  }
-  
-  /* Adjusts the role font size for tablets */
-  .hero-role {
-    font-size: 1.2rem;
-  }
-  
-  /* Centers the bio paragraph on mobile layouts */
-  .hero-bio {
-    margin: 0 auto 2rem auto; 
-  }
-
-  /* Centers the hero buttons */
-  .hero-section .links {
-    justify-content: center;
-  }
-
-  /* Centers the portfolio action buttons container on mobile/tablet screens */
-  .portfolio-actions {
-    margin: 0 auto 2.5rem auto;
-  }
-
-  /* Stacks the project title box above the description */
-  .testimony-section .group {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  /* Adjusts the project left column to sit on top */
-  .testimony-section .person-details {
-    flex: auto;
-    border-right: none;
-    border-bottom: 1px solid #334155;
-    padding-right: 0;
-    padding-bottom: 1.5rem;
-  }
-
-  /* Stacks the contact text above the form */
-  .contact-section .group {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 600px) {
-  /* Compresses the navbar on phones so links don't break the layout */
-  nav {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  /* Shrinks the hero name slightly more for small phone screens */
-  .hero-section .text h2 {
-    font-size: 2.2rem;
-  }
-
-  /* Centers the skill cards on a phone screen */
-  .skills-section .cells {
-    justify-content: center; 
-  }
-  
-  /* Forces the skill cards to stack and take full width on tiny screens */
-  .skills-section .cell {
-    width: 100%; 
-    justify-content: center; /* Centers the logo and text inside the stacked card */
-  }
-}
-
-/* ==========================================================================
    ADVANCED FOOTER SECTION
    ========================================================================== */
-/* Main wrapper styling: sets a distinct dark background to separate it from the main content */
 .advanced-footer {
-  background-color: #0b1120; /* Slightly darker than your main background */
+  background-color: #0b1120;
   border-top: 1px solid #1e293b;
   padding: 4rem 5% 1rem 5%;
   margin-top: 4rem;
   color: #94a3b8;
 }
 
-/* Flexbox grid to arrange the three columns side-by-side with equal spacing */
 .footer-top {
   display: flex;
-  flex-wrap: wrap; /* Allows columns to wrap to the next line on small screens */
+  flex-wrap: wrap; 
   justify-content: space-between;
   gap: 3rem;
   margin-bottom: 3rem;
 }
 
-/* Assigns flex values so the brand column takes up more space than the links */
 .footer-brand { flex: 2; min-width: 250px; }
 .footer-links { flex: 1; min-width: 150px; }
 .footer-newsletter { flex: 1.5; min-width: 250px; }
 
-/* Styles the Brand Logo Text */
 .footer-brand h2 {
   color: #f8fafc;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-/* Styles the colored dot at the end of your name */
 .accent-dot {
   color: #38bdf8;
 }
 
-/* Styles the social media icons container */
 .footer-socials {
   display: flex;
   gap: 1rem;
   margin-top: 1.5rem;
 }
 
-/* Styles the individual social media icons */
 .footer-socials a {
   width: 40px;
   height: 40px;
@@ -705,19 +539,17 @@ section h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%; /* Makes the icons perfectly circular */
+  border-radius: 50%; 
   font-size: 1.2rem;
   transition: all 0.3s ease;
 }
 
-/* Adds a hover effect that lifts the icon and turns it blue */
 .footer-socials a:hover {
   background-color: #38bdf8;
   color: #0f172a;
   transform: translateY(-5px);
 }
 
-/* Styles the column headers (e.g., "Quick Links") */
 .footer-top h3 {
   color: #f8fafc;
   font-size: 1.2rem;
@@ -726,7 +558,6 @@ section h2 {
   padding-bottom: 0.5rem;
 }
 
-/* Creates a small blue underline beneath the column headers */
 .footer-top h3::after {
   content: '';
   position: absolute;
@@ -737,46 +568,40 @@ section h2 {
   background-color: #38bdf8;
 }
 
-/* Removes bullet points from the quick links list */
 .footer-links ul {
   list-style: none;
 }
 
-/* Adds spacing between the links */
 .footer-links li {
   margin-bottom: 0.8rem;
 }
 
-/* Hover effect for the quick links that nudges them slightly to the right */
 .footer-links a:hover {
   color: #38bdf8;
   padding-left: 5px;
 }
 
-/* Flexbox layout to align the email input and the submit button on the same line */
 .newsletter-form {
   display: flex;
   margin-top: 1rem;
 }
 
-/* Styles the email text input field */
 .newsletter-form input {
   flex: 1;
   background-color: #1e293b;
   border: 1px solid #334155;
   color: #f8fafc;
   padding: 0.8rem 1rem;
-  border-radius: 5px 0 0 5px; /* Rounds the left corners only */
+  border-radius: 5px 0 0 5px; 
   outline: none;
 }
 
-/* Styles the submit button */
 .newsletter-form button {
   background-color: #38bdf8;
   color: #0f172a;
   border: none;
   padding: 0 1.2rem;
-  border-radius: 0 5px 5px 0; /* Rounds the right corners only */
+  border-radius: 0 5px 5px 0; 
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -785,7 +610,6 @@ section h2 {
   background-color: #0ea5e9;
 }
 
-/* Styles the bottom copyright bar */
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -795,7 +619,6 @@ section h2 {
   font-size: 0.9rem;
 }
 
-/* Styles the 'Back to Top' floating arrow button */
 .back-to-top {
   background-color: #1e293b;
   color: #f8fafc;
@@ -814,24 +637,6 @@ section h2 {
 }
 
 /* ==========================================================================
-   MOBILE RESPONSIVENESS (FOOTER)
-   ========================================================================== */
-@media (max-width: 768px) {
-  /* Forces the columns to stack vertically on small screens */
-  .footer-top {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  /* Centers the copyright and back-to-top button on small screens */
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-  }
-}
-
-/* ==========================================================================
    TYPING ANIMATION STYLES
    ========================================================================== */
 .hero-title {
@@ -842,7 +647,7 @@ section h2 {
 }
 
 .typing-text {
-  color: #38bdf8; /* Blue accent color for the changing text */
+  color: #38bdf8; 
 }
 
 .cursor {
@@ -858,29 +663,19 @@ section h2 {
   50% { opacity: 0; }
 }
 
-@media (max-width: 850px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
-}
-
 /* ==========================================================================
    RESUME SECTION (Experience & Education)
    ========================================================================== */
-
-/* Flexbox container to place the two columns side-by-side on desktop */
 .resume-container {
   display: flex;
   gap: 4rem;
   width: 100%;
 }
 
-/* Gives each column equal width */
 .resume-column {
   flex: 1;
 }
 
-/* Styles the section headers (e.g., "Work Experience" with the icon) */
 .resume-column h2 {
   font-size: 2rem;
   color: #f8fafc;
@@ -890,12 +685,10 @@ section h2 {
   gap: 0.8rem;
 }
 
-/* Styles the FontAwesome icon next to the section header */
 .resume-column h2 i {
   color: #38bdf8;
 }
 
-/* The card representing a single job or degree */
 .resume-item {
   background-color: #1e293b;
   border: 1px solid #334155;
@@ -905,18 +698,16 @@ section h2 {
   transition: transform 0.3s ease;
 }
 
-/* Lifts the card slightly when the user hovers over it */
 .resume-item:hover {
   transform: translateY(-5px);
 }
 
-/* Places the job/degree title and the date on the same row */
 .resume-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
-  flex-wrap: wrap; /* Allows the date to drop down on very small screens */
+  flex-wrap: wrap; 
 }
 
 .resume-header h3 {
@@ -924,7 +715,6 @@ section h2 {
   color: #f8fafc;
 }
 
-/* Styles the date pill (e.g., "2025 - Present") */
 .resume-date {
   background-color: rgba(56, 189, 248, 0.1);
   color: #38bdf8;
@@ -934,14 +724,12 @@ section h2 {
   font-weight: 600;
 }
 
-/* Styles the company or school name */
 .resume-company {
   color: #94a3b8;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
-/* Styles the paragraph describing what you did at the job */
 .resume-description {
   color: #cbd5e1;
   font-size: 0.95rem;
@@ -951,16 +739,12 @@ section h2 {
 /* ==========================================================================
    PROJECTS SECTION (6-Card CSS Grid)
    ========================================================================== */
-
-/* Uses CSS Grid to automatically place cards side-by-side. 
-   auto-fit and minmax ensure the grid breaks down to 1 column on mobile natively. */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
 
-/* The physical card container for each project */
 .project-card {
   background-color: #1e293b;
   border: 1px solid #334155;
@@ -971,56 +755,66 @@ section h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect for the project cards */
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
   border-color: #38bdf8;
 }
 
-/* Forces the content to take up remaining height so buttons align at the bottom */
 .project-content {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-/* Aligns the project title and the "Pending" badge horizontally */
+/* --- THE FIX: Aligns items at the top and adds a gap --- */
 .project-title-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start; 
   margin-bottom: 1rem;
+  gap: 15px;
 }
 
 .project-title-row h3 {
   color: #f8fafc;
   font-size: 1.3rem;
+  line-height: 1.3;
+  margin: 0;
 }
 
-/* Styles the warning orange pending badge for unfinished projects */
-.badge.pending {
-  background-color: rgba(245, 158, 11, 0.1);
-  color: #f59e0b;
-  border: 1px solid #f59e0b;
+/* --- THE FIX: Base Badge Styles + Success Class Added --- */
+.badge {
   padding: 0.2rem 0.6rem;
   border-radius: 6px;
   font-size: 0.8rem;
   font-weight: 600;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  white-space: nowrap; 
+  flex-shrink: 0; 
 }
 
-/* The project description text */
+.badge.pending {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+  border: 1px solid #f59e0b;
+}
+
+.badge.success {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid #10b981;
+}
+
 .project-desc {
   color: #cbd5e1;
   font-size: 0.95rem;
   margin-bottom: 1.5rem;
-  flex-grow: 1; /* Pushes the tech-stack meta tags down to the bottom */
+  flex-grow: 1; 
 }
 
-/* Container for the Tech Stack and Role text */
 .project-meta {
   display: flex;
   flex-direction: column;
@@ -1030,19 +824,16 @@ section h2 {
   color: #94a3b8;
 }
 
-/* Adds a subtle blue tint to the FontAwesome icons next to the Tech Stack */
 .project-meta i {
   color: #38bdf8;
-  width: 16px; /* Ensures icons align perfectly vertically */
+  width: 16px; 
 }
 
-/* Container for the Live Demo and GitHub buttons */
 .project-links {
   display: flex;
   gap: 1rem;
 }
 
-/* Styles the small outline buttons inside the project cards */
 .btn-small {
   background-color: transparent;
   color: #f8fafc;
@@ -1055,11 +846,10 @@ section h2 {
   align-items: center;
   gap: 0.5rem;
   transition: all 0.3s ease;
-  flex: 1; /* Makes both buttons take up exactly 50% width */
+  flex: 1; 
   justify-content: center;
 }
 
-/* Hover effect specifically for project buttons */
 .btn-small:hover {
   background-color: #38bdf8;
   border-color: #38bdf8;
@@ -1067,95 +857,75 @@ section h2 {
 }
 
 /* ==========================================================================
-   MOBILE RESPONSIVENESS (Media Queries)
+   CUSTOM MODAL
    ========================================================================== */
-@media (max-width: 850px) {
-  /* Stacks the Work Experience and Education columns vertically on tablets and phones */
-  .resume-container {
-    flex-direction: column;
-    gap: 2rem;
-  }
-}
-
-/* ==========================================================================
-   CUSTOM MODAL (Project Under Construction)
-   ========================================================================== */
-
-/* The dark overlay that covers the entire screen behind the modal */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(15, 23, 42, 0.85); /* Matches your dark theme background with transparency */
-  display: none; /* Hidden by default until JS triggers it */
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  z-index: 2000; /* Ensures it sits on top of everything, including the sticky nav */
-  padding: 20px; /* Prevents the modal from touching screen edges on mobile devices */
-  backdrop-filter: blur(5px); /* Adds a premium blur effect to the background */
+  background: rgba(15, 23, 42, 0.85); 
+  display: none; 
+  justify-content: center; 
+  align-items: center; 
+  z-index: 2000; 
+  padding: 20px; 
+  backdrop-filter: blur(5px); 
 }
 
-/* The actual box containing the message */
 .modal-content {
-  background-color: #1e293b; /* Matches your project card backgrounds */
-  color: #f8fafc; /* Standard crisp white text */
+  background-color: #1e293b; 
+  color: #f8fafc; 
   padding: 2.5rem 2rem;
-  border-radius: 12px; /* Matches your existing border radii */
+  border-radius: 12px; 
   max-width: 450px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Deep shadow for 3D pop */
-  border: 1px solid #334155; /* Subtle border matching your cards */
-  animation: slideUpFade 0.3s ease-out forwards; /* Smooth entrance animation */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); 
+  border: 1px solid #334155; 
+  animation: slideUpFade 0.3s ease-out forwards; 
 }
 
-/* FontAwesome icon styling inside the modal */
 .modal-icon {
   font-size: 3.5rem;
-  color: #38bdf8; /* Your primary brand blue */
+  color: #38bdf8; 
   margin-bottom: 1.5rem;
 }
 
-/* Heading inside the modal */
 .modal-content h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #f8fafc;
 }
 
-/* Description paragraph inside the modal */
 .modal-content p {
-  color: #cbd5e1; /* Soft silver text for readability */
+  color: #cbd5e1; 
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 2rem;
 }
 
-/* The 'Got it!' close button */
 .modal-btn {
-  background-color: #38bdf8; /* Primary blue */
-  color: #0f172a; /* Dark text for contrast */
+  background-color: #38bdf8; 
+  color: #0f172a; 
   border: none;
   padding: 0.8rem 2rem;
-  border-radius: 8px; /* Matches your other buttons */
+  border-radius: 8px; 
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: inherit; /* Inherits Poppins */
-  width: 100%; /* Makes it full width inside the modal for a modern look */
+  font-family: inherit; 
+  width: 100%; 
 }
 
-/* Hover state for the close button */
 .modal-btn:hover {
-  background-color: #0ea5e9; /* Darker blue on hover */
-  transform: translateY(-2px); /* Slight lift */
-  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2); /* Soft blue glow */
+  background-color: #0ea5e9; 
+  transform: translateY(-2px); 
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2); 
 }
 
-/* Keyframe animation for the modal entrance */
 @keyframes slideUpFade {
   from {
     opacity: 0;
@@ -1165,34 +935,40 @@ section h2 {
     opacity: 1;
     transform: translateY(0);
   }
-}/* ==========================================================================
-   MOBILE NAV FIX (Overrides any old stacking rules)
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS
    ========================================================================== */
 @media (max-width: 850px) {
-  /* 1. Forces the navbar to stay on one single horizontal line */
+  .hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+  }
+  .hero-section .text h2 { font-size: 2.5rem; }
+  .hero-role { font-size: 1.2rem; }
+  .hero-bio { margin: 0 auto 2rem auto; }
+  .hero-section .links { justify-content: center; }
+  .portfolio-actions { margin: 0 auto 2.5rem auto; }
+  .resume-container { flex-direction: column; gap: 2rem; }
+  
   nav {
     flex-direction: row !important;
     justify-content: space-between !important;
     padding: 1rem 5% !important;
   }
+  .desktop-links { display: none !important; }
+  .mobile-nav-toggle { display: block !important; }
+  .hide-text-mobile { display: none !important; }
+  nav .right { gap: 1rem !important; }
+}
 
-  /* 2. Hides the desktop links so they don't show up outside the sidebar */
-  .desktop-links {
-    display: none !important;
-  }
-
-  /* 3. Forces the hamburger menu icon to appear */
-  .mobile-nav-toggle {
-    display: block !important;
-  }
-
-  /* 4. Hides the words next to your social icons to save space */
-  .hide-text-mobile {
-    display: none !important;
-  }
-
-  /* 5. Shrinks the gap between your social icons so everything fits */
-  nav .right {
-    gap: 1rem !important;
+@media (max-width: 600px) {
+  .hero-section .text h2 { font-size: 2.2rem; }
+  .skills-section .cells { justify-content: center; }
+  .skills-section .cell {
+    width: 100%; 
+    justify-content: center; 
   }
 }
